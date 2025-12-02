@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { faker } from '@faker-js/faker';
-import {HomePage} from '/Users/glushenkovdd/playwright/src / pages/home.page.js';
-import {MainPage} from '/Users/glushenkovdd/playwright/src / pages/main.page.js';
-import {RegisterPage} from '/Users/glushenkovdd/playwright/src / pages/register.page.js';
+import {HomePage} from '/Users/glushenkovdd/playwright/src/pages/home.page.js';
+import {MainPage} from '/Users/glushenkovdd/playwright/src/pages/main.page.js';
+import {RegisterPage} from '/Users/glushenkovdd/playwright/src/pages/register.page.js';
 
 const user = {
     email: faker.internet.email({provider: 'qa.guru' }),

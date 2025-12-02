@@ -1,22 +1,35 @@
+import { expect } from '@playwright/test';
+
 export class MainPage {
-// техническое описание страницы
+  // техническое описание страницы
 
-    constructor (page) {
-        this.page = page;
-        this.signupLink = page.getByRole('link', { name: 'Sign up' }).describe('Кнопка//cсылка зарегистрироваться');
-        this.loginLink = page.getByRole('link', { name: 'Login' }).describe('Кнопка//cсылка залогиниться');
-    }
-// бизнесовые действия со страницей
+  constructor(page) {
+    this.page = page;
 
-async gotoLogin() {
+    this.signupLink = page
+      .getByRole('link', { name: 'Sign up' })
+      .describe('Кнопка//cсылка зарегистрироваться');
+
+    this.loginLink = page
+      .getByRole('link', { name: 'Login' })
+      .describe('Кнопка//cсылка залогиниться');
+  }
+
+  
+  // бизнесовые действия со страницей
+
+  async gotoLogin() {
+    console.log('Переходим на страницу авторизации');
     this.loginLink.click();
-}
+  }
 
-async gotoRegister() {
+  async gotoRegister() {
+    console.log('Переходим на страницу регистрации');
     this.signupLink.click();
-}
+  }
 
-async open(url) {
+  async open(url) {
+    console.log(`Открываем страницу ${url}`);
     await this.page.goto(url);
-}
+  }
 }

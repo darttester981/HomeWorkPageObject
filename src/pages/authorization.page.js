@@ -6,7 +6,7 @@ export class AuthorizationPage {
 
     this.signupButton = page.getByRole('button', { name: 'Login' });
     this.emailInput = page.getByRole('textbox', { name: 'Email' });
-    //        this.nameInput = page.getByRole('textbox', { name: 'Your Name' });
+  // this.nameInput = page.getByRole('textbox', { name: 'Your Name' });
     this.passwordInput = page.getByRole('textbox', { name: 'Password' });
   }
   // бизнесовые действия со страницей
@@ -21,3 +21,18 @@ export class AuthorizationPage {
     await this.signupButton.click();
   }
 }
+
+
+
+/*
+// Аутентификация пользователя
+
+    async autorization(email, password) {
+        await this.isPageOpened();
+        await this.fillEmail(email);
+        await this.fillPassword(password);
+        await this.clickLoginButton();
+        await this.page.waitForLoadState('domcontentloaded');
+    }
+}
+*/
