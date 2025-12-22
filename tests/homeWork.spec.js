@@ -83,6 +83,4 @@ test('3.Создание статьи', async ({ page }) => {
   await expect(articleViewPage.articleTitle).toBeVisible();
   await expect(articleViewPage.articleTitle).toHaveText(title);
     });
-
-
 });
