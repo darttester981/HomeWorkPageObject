@@ -3,13 +3,25 @@ export class AuthorizationPage {
 
   constructor(page) {
     this.page = page;
-
-    this.signupButton = page.getByRole('button', { name: 'Login' });
     this.emailInput = page.getByRole('textbox', { name: 'Email' });
-  // this.nameInput = page.getByRole('textbox', { name: 'Your Name' });
     this.passwordInput = page.getByRole('textbox', { name: 'Password' });
+    this.signupButton = page.getByRole('button', { name: 'Login' });
   }
+
+
+
   // бизнесовые действия со страницей
+
+  async login(email, password) {
+    await this.emailInput.click();
+    await this.emailInput.fill(email);
+
+    await this.passwordInput.click();
+    await this.passwordInput.fill(password);
+
+    await this.loginButton.click();
+}
+  
 
   async authorize(email, password) {
     await this.emailInput.click();
@@ -21,18 +33,3 @@ export class AuthorizationPage {
     await this.signupButton.click();
   }
 }
-
-
-
-/*
-// Аутентификация пользователя
-
-    async autorization(email, password) {
-        await this.isPageOpened();
-        await this.fillEmail(email);
-        await this.fillPassword(password);
-        await this.clickLoginButton();
-        await this.page.waitForLoadState('domcontentloaded');
-    }
-}
-*/

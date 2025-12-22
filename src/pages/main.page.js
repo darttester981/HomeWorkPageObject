@@ -19,17 +19,14 @@ export class MainPage {
   // бизнесовые действия со страницей
 
   async gotoLogin() {
-    console.log('Переходим на страницу авторизации');
     this.loginLink.click();
   }
 
   async gotoRegister() {
-    console.log('Переходим на страницу регистрации');
     this.signupLink.click();
   }
 
   async open(url) {
-    console.log(`Открываем страницу ${url}`);
     await this.page.goto(url);
   }
 }

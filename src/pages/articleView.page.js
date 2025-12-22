@@ -10,13 +10,4 @@ export class ArticleViewPage {
         this.tagList = page.locator('.tag-list');
         this.tagItems = page.locator('.tag-list li');
     }
-
-
-// Проверка, что статья открыта по названию
-
-    async checkArticleIsOpenedByTitle(expectedTitle) {
-        console.log(`Проверяем, что статья с названием "${expectedTitle}" открыта`);
-        await expect(this.articleTitle).toBeVisible();
-        await expect(this.articleTitle).toContainText(expectedTitle);
-    }
 }

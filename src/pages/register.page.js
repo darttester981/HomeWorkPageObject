@@ -24,4 +24,5 @@ export class RegisterPage {
         
         await this.signupButton.click();
     }
+    
     }

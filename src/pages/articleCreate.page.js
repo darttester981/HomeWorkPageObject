@@ -15,25 +15,20 @@ export class ArticleCreatePage {
      // Заполнение полей при создании статьи
   
     async fillArticleFields(title, description, body, tags) {
-        console.log('Заполняем поля статьи');
 
         // Заполняем Заголовок статьи
         await this.titleInput.fill(title);
-        console.log('Заполняем поле "Article Title"');
         await expect(this.titleInput).toHaveValue(title);
 
         // Заполняем Описание статьи
-        console.log('Заполняем поле "What\'s this article about?"');
         await this.descriptionInput.fill(description);
         await expect(this.descriptionInput).toHaveValue(description);
 
         // Заполняем Содержание статьи
-        console.log('Заполняем поле "Write your article (in markdown)"');
         await this.bodyInput.fill(body);
         await expect(this.bodyInput).toHaveValue(body);
 
         // Заполняем Тэги
-        console.log('Заполняем поле "Enter tags');
         await this.tagInput.fill(tags);
         await expect(this.tagInput).toHaveValue(tags);
     }
