@@ -15,17 +15,19 @@ export class HomePage {
   async clickArticleCreateLink() {
     await this.articleCreateLink.click();               
   }
+
+  // переход в настройки
   async gotoSettings() {
     await this.profileName.click();
     await this.settingsLink.click();
   
   }  
-
+  // разлогин
   async logOut() {
     await this.profileName.click();
     await this.logoutLink.click();
     }
-
+  // получение имени юзера
    getProfileNameLocator() {
     return this.profileName;
   }

@@ -13,15 +13,16 @@ export class MainPage {
   
   // бизнесовые действия со страницей
 
+  // переход на страницу логина
   async gotoLogin() {
     this.loginLink.click();
   }
-
+  // переход на страницу регистрации
   async gotoRegister() {
     this.signupLink.click();
   }
 
-
+  // открыть страницу 
   async open(url) {
     await this.page.goto(url);
   }

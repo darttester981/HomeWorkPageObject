@@ -12,6 +12,7 @@ export class AuthorizationPage {
 
   // бизнесовые действия со страницей
 
+  // логин под существующим юзером
   async login(email, password) {
     await this.emailInput.click();
     await this.emailInput.fill(email);
@@ -19,14 +20,10 @@ export class AuthorizationPage {
     await this.passwordInput.click();
     await this.passwordInput.fill(password);
 
-  //  await this.loginButton.click();
-    await Promise.all([
-    this.page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 15000 }),
-    this.loginButton.click()
-]);
+    await this.loginButton.click();
 }
   
-
+  // авторизация
   async authorize(email, password) {
     await this.emailInput.click();
     await this.emailInput.fill(email);

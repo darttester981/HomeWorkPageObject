@@ -4,6 +4,7 @@ export class TagPage {
     this.reclameTag = page.getByRole('button', { name: 'реклама' });
   }
 
+  // клик по первому тегу
   async firstTagClick() {
     await this.reclameTag.click();
   }

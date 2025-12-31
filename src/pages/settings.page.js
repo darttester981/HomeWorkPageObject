@@ -8,13 +8,14 @@ export class SettingsPage {
         this.profileName = page.locator('.dropdown-toggle');
     }
 
+    // Изменить краткое инфо о юзере
         async changeBio(text) {  
         await this.bioInput.click();
         await this.bioInput.fill(text);
 
         await this.updateSettingsButton.click();  
     }
-
+    // Изменить имя пользователя
         async changeName(name) {  
         await this.nameInput.click();
         await this.nameInput.fill(name);

@@ -11,6 +11,7 @@ export class RegisterPage {
         }
     // бизнесовые действия со страницей
     
+    // Регистрация нового юзера
     async register(name, email, password) {
 
         await this.nameInput.click();
